@@ -1,0 +1,118 @@
+$main-color: #f1af09;
+$font-size: 28px;
+$Niconne: 'Niconne', cursive;
+$Helvetica: 'Helvetica', sans-serif;
+
+%flex {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: column;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+	background: url('../images/bg.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+body {
+	font-size: $font-size;
+}
+#container {
+	@extend %flex;
+	font-family: $Niconne;
+	text-align: center;
+	min-height: 100vh;
+	margin-bottom: 40px;
+
+	.title { margin: 60px 0 0 0; color: #fff; }
+
+	nav { margin-top: 15px; }
+
+	button {
+		position: relative;
+		margin: 10px 20px;
+		color: #fff;
+		background: transparent;
+		border: none;
+
+		&::after {
+			content: "";
+			width: 0;
+			height: 3px;
+			position: absolute;
+			background: #fff;
+			display: block;
+			right: 0;
+			margin-top: 3px;
+			transition: width 0.2s ease;
+		}
+
+		&:hover {
+			&::after {
+				width: 100%;
+				left: 0;
+			}
+		}
+	}
+}
+.content {
+	@extend %flex;
+	font-family: $Helvetica;
+	width: 600px;
+	min-height: 600px;
+	padding: 25px 40px 40px;
+	margin-top: 15px;
+	background: #000;
+	color: $main-color;
+	border: 1px solid $main-color;
+	font-size: $font-size * 0.66;
+
+	h1 { text-align: center; margin: 0; }
+	p { text-align: justify; margin-top: 20px; }
+	a { color: $main-color; }
+	span { display: block; text-align: center; margin-top: 20px; }
+	img { 
+		max-height: 500px;
+		max-width: 100%;
+		width: auto;
+		height: auto;
+	}
+
+	iframe {
+		margin-top: 15px;
+		width: 100%;
+		height: 400px;
+		border: 0;
+	}
+
+	.pizza-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+		.pizza {
+			border: 1px solid;
+		   margin-top: 20px;
+		   width: 250px;
+		   padding: 20px;
+			p { text-align: center; font-size: 0.85em; }
+			.pizza-name { font-size: 1.5em; }
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#container {
+		nav { display: flex; flex-direction: column; }
+	}
+	.content { width: auto;	}
+	.pizza-container { 
+		flex-direction: column;
+		align-items: center;
+	}
+}
