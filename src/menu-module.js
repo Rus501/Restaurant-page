@@ -1,3 +1,11 @@
+import Pepperoni from '../images/Pepperoni-Beef.png';
+import Alfredo from '../images/Alfredo.png';
+import Veggie from '../images/Veggie.png';
+import Hawaiian from '../images/Hawaiian.png';
+import MacAndCheese from '../images/MacAndCheese.png';
+import Meateater from '../images/Meat-eater.png';
+
+
 const main = document.querySelector('#container')
 
 const menu = (() => {
@@ -58,12 +66,12 @@ const menu = (() => {
 
 	}
 
-	const pepperoni = createPizza('Pepperoni-Beef', '../images/Pepperoni-Beef.png', 'Pepperoni-Beef pizza', 'American classic with spicy pepperoni, Mozzarella and signature tomato sauce')
-	const alfredo = createPizza('Alfredo', '../images/Alfredo.png', 'Alfredo pizza', 'Traditional crust brushed with garlic butter and topped with creamy Alfredo sauce and 100% real cheese.')
-	const veggie = createPizza('Veggie', '../images/Veggie.png', 'Veggie pizza', 'Traditional crust brushed with garlic butter and topped with Zesty Parmesan Ranch sauce, 100% real cheddar cheese, mushrooms, red onions, green peppers, tomatoes and Parmesan oregano seasoning.')
-	const hawaiian = createPizza('Hawaiian', '../images/Hawaiian.png', 'Hawaiian pizza', 'Traditional crust brushed with garlic butter and topped with tomato sauce, 100% real cheese, ham and pineapple.')
-	const macAndCheese = createPizza('Mac & Cheese', '../images/MacAndCheese.png', 'Mac And Cheese pizza', 'Traditional crust brushed with garlic butter and topped with 100% real cheese and Cicis signature macaroni & cheese.')
-	const meatEater = createPizza('Meat Eater', '../images/Meat-eater.png', 'Meat Eater pizza', 'Traditional crust brushed with garlic butter and topped with tomato sauce, 100% real cheese, pepperoni, ham, beef and sausage')
+	const pepperoni = createPizza('Pepperoni-Beef', Pepperoni, 'Pepperoni-Beef pizza', 'American classic with spicy pepperoni, Mozzarella and signature tomato sauce')
+	const alfredo = createPizza('Alfredo', Alfredo, 'Alfredo pizza', 'Traditional crust brushed with garlic butter and topped with creamy Alfredo sauce and 100% real cheese.')
+	const veggie = createPizza('Veggie', Veggie, 'Veggie pizza', 'Traditional crust brushed with garlic butter and topped with Zesty Parmesan Ranch sauce, 100% real cheddar cheese, mushrooms, red onions, green peppers, tomatoes and Parmesan oregano seasoning.')
+	const hawaiian = createPizza('Hawaiian', Hawaiian, 'Hawaiian pizza', 'Traditional crust brushed with garlic butter and topped with tomato sauce, 100% real cheese, ham and pineapple.')
+	const macAndCheese = createPizza('Mac & Cheese', MacAndCheese, 'Mac And Cheese pizza', 'Traditional crust brushed with garlic butter and topped with 100% real cheese and Cicis signature macaroni & cheese.')
+	const meatEater = createPizza('Meat Eater', Meateater, 'Meat Eater pizza', 'Traditional crust brushed with garlic butter and topped with tomato sauce, 100% real cheese, pepperoni, ham, beef and sausage')
 
 	pizzaContainer.appendChild(pepperoni)
 	pizzaContainer.appendChild(alfredo)

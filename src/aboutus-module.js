@@ -1,3 +1,5 @@
+import Photo from '../images/content1.jpg';
+
 const main = document.querySelector('#container')
 
 const aboutUs = (() => {
@@ -32,7 +34,7 @@ const aboutUs = (() => {
 	contentH1.textContent = 'Welcome to the pizza restaurant'
 
 	const contentImg = document.createElement('img')
-	contentImg.src = '../images/content1.jpg'
+	contentImg.src = Photo
 	contentImg.alt = 'Freshly baked pizza'
 	contentImg.title = 'Pizza time'
 
